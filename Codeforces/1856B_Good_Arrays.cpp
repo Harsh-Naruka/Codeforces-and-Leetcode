@@ -1,11 +1,9 @@
 #include<iostream>
 #include<vector>
-#include<unordered_set>
 using namespace std;
 
 int main(){
     int t;cin>>t;
-    bool ans=true;
     while(t--){
         int n;cin>>n;
         
