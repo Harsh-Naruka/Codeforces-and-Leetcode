@@ -7,7 +7,7 @@ int main(){
     while(t--){
         int n;cin>>n;
 
-        int sum=0;
+        long long int sum=0;
         int ones=0;
         vector<int> v(n);
 
