@@ -16,9 +16,9 @@ int main(){
             sum+=v[i];
             if(1==v[i])ones++;
         }
-
-        
-        
+        if(n==1){cout<<"NO\n";}
+        else if(sum>n+ones)cout<<"YES\n";
+        else cout<<"NO\n";
     }
     
 }
