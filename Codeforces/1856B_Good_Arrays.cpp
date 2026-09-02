@@ -25,7 +25,8 @@ int main(){
             }
             else{ ans=false;}
         }
-    }
-    if(ans==true)cout<<"YES";
+        if(ans==true)cout<<"YES";
     else cout<<"NO";
+    }
+    
 }
