@@ -6,16 +6,14 @@ int main(){
     int t;cin>>t;
     while(t--){
         int n;cin>>n;
-        
-        if(n==1)ans=false;
-
+        int sum=0;
         vector<int> v(n);
 
         for(int i=0;i<n;i++){
             cin>>v[i];
+            sum+=v[i];
         }
 
-        unordered_set<int> s;
 
         for(int x:v){
             if(s.find(x)==s.end()){
