@@ -14,12 +14,6 @@ int main(){
             sum+=v[i];
         }
 
-
-        for(int x:v){
-            if(s.find(x)==s.end()){
-                s.insert(x);
-            }
-            else{ ans=false;}
         }
         if(ans==true)cout<<"YES";
     else cout<<"NO";
