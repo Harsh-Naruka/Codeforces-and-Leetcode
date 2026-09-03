@@ -8,9 +8,9 @@ int main(){
         int balance=0;
         int n;
         string s;
-        cin>>n>>s;
+        cin>>s;
         bool check=false;
-        for(int i=0;i<n-1;i++){
+        for(int i=0;i<s.size()-1;i++){
             if(s[i]=='(')balance++;
             else balance--;
 
