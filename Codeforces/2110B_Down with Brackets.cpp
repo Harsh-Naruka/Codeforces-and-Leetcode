@@ -10,7 +10,7 @@ int main(){
         string s;
         cin>>n>>s;
         bool check=false;
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n-1;i++){
             if(s[i]=='(')balance++;
             else balance--;
 
