@@ -13,9 +13,9 @@ int main(){
         else odd++;
     }
     if(total%2==0){
-        return even;
+        cout<<even;
     }
     else {
-        return odd;
+        cout<<odd;
     }
 }
