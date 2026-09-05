@@ -22,7 +22,7 @@ int main() {
         ans = max(ans, happiness);
     }
 
-    cout << ans-1;
+    cout << ans;
 
     return 0;
 }
