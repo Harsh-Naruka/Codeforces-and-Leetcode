@@ -1,26 +1,41 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
+#include <algorithm>
 using namespace std;
 
-int main(){
-    int n;cin>>n;
-    string s;cin>>s;
-    string a;
-    if(n<3){cout<<s;}
-    else{
-        while(n>2){
-            if(n%2==0){
-                a+=s[(n/2)-1];
-            }
-            else {
-                a+=s[((n+1)/2)-1];
-            }
-            n--;
+int main() {
+    int n;
+    cin >> n;
+
+    string s;
+    cin >> s;
+
+    string ans;
+
+    if (n % 2 == 1) {
+        // Odd length: read from middle towards left
+        for (int i = n - 1; i >= 0; i -= 2) {
+            ans += s[i];
         }
-        for(int i=n-3;i<n;i++){
-            a+=s[i];
+
+        for (int i = 1; i < n; i += 2) {
+            ans += s[i];
         }
-        cout<<a;
     }
+    else {
+        // Even length: read from middle towards left
+        for (int i = n - 1; i >= 0; i -= 2) {
+            ans += s[i];
+        }
+
+        for (int i = 0; i < n; i += 2) {
+            ans += s[i];
+        }
+    }
+
+    reverse(ans.begin(), ans.end());
+
+    cout << ans;
+
     return 0;
 }
