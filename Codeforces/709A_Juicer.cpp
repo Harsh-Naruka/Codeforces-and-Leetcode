@@ -12,8 +12,8 @@ int main(){
         cin>>v[i];
         if(v[i]<=b){
             juice+=v[i];
-            if(juice>=d){
-                juice-=d;
+            if(juice>d){
+                juice=0;
                 ans++;
             }
         }
