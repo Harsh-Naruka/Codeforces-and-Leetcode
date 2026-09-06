@@ -17,7 +17,12 @@ int main(){
 
     int ans=0;
     for(int i=0;i<n;i++){
-        if(s[i]==t[i])ans++;
+        if(s[i]==t[i]){
+            ans++;
+        }
+        else{
+            break;
+        }
     }
     int len=ss+st;
     if(ans==0)cout<<len;
