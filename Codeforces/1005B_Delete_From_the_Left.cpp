@@ -21,5 +21,5 @@ int main(){
     }
     int len=ss+st;
     if(ans==0)cout<<len;
-    else cout<<(ans*2)-len;
+    else cout<<len-(ans*2);
 }
