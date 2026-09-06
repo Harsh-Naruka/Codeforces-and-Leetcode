@@ -10,7 +10,7 @@ int main(){
     vector<int> v(n);
     for(int i=0;i<n;i++){
         cin>>v[i];
-        if(v[i]<b){
+        if(v[i]<=b){
             juice+=v[i];
             if(juice>=d){
                 juice-=d;
