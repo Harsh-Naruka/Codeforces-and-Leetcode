@@ -19,6 +19,7 @@ int main(){
     for(int i=0;i<n;i++){
         if(s[i]==t[i])ans++;
     }
-    if(ans==0)cout<<ss+st;
-    else cout<<ss+st-ans;
+    int len=ss+st;
+    if(ans==0)cout<<len;
+    else cout<<(ans*2)-len;
 }
