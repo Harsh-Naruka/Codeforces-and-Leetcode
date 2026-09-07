@@ -13,7 +13,8 @@ int main(){
         if(v[i]<=b){
             juice+=v[i];
             if(juice>d){
-                
+                juice=0;
+                ans++;
             }
         }
     }
