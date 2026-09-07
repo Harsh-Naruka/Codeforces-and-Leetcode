@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 int main(){
@@ -6,6 +7,6 @@ int main(){
     while(t--){
         int n,k;
         cin>>n>>k;
-        cout<<ceil((n-1)/(k-1))<<'\n';
+        cout<<ceil((double)(n-1)/(k-1))<<'\n';
     }
 }
