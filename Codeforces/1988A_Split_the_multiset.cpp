@@ -6,6 +6,6 @@ int main(){
     while(t--){
         int n,k;
         cin>>n>>k;
-        cout<<ceil((n-1)/k-1)<<'\n';
+        cout<<ceil((n-1)/(k-1))<<'\n';
     }
 }
