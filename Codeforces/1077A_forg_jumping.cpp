@@ -7,8 +7,8 @@ int main(){
         int a,b,k;
         cin>>a>>b>>k;
 
-            int asum=0;
-            int bsum=0;
+            long long asum=0;
+            long long bsum=0;
 
         while(k){
             if(k%2==0){
