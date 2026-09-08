@@ -4,21 +4,19 @@ using namespace std;
 int main(){
     int t;cin>>t;
     while(t--){
-        int a,b,k;
+        long long a,b,k;
         cin>>a>>b>>k;
 
             long long asum=0;
             long long bsum=0;
-
-        while(k){
             if(k%2==0){
-                asum+=a;
+                asum*=(k/2);
+                bsum*=(k/2);
             }
             else{
-                bsum+=b;
+                asum*=((k+1)/2);
+                bsum*=((k-1)/2);
             }
-            cout<<asum-bsum<<'\n';
-            k--;
-        }
+        cout<<asum-bsum<<'\n';    
     }
 }
