@@ -18,6 +18,7 @@ int main(){
                 bsum+=b;
             }
             cout<<asum-bsum<<'\n';
+            k--;
         }
     }
 }
