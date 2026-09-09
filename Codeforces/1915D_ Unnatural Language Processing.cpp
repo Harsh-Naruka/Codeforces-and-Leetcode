@@ -1,8 +1,9 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 
-bool vowel(char c) {
+bool isVowel(char c) {
     return c == 'a' || c == 'e';
 }
 
@@ -17,33 +18,33 @@ int main() {
         string s;
         cin >> s;
 
-        string a;
+        string ans;
 
-        for (int i = 0; i < n; ) {
+        int i = n - 1;
 
-            // Take C and V
-            a += s[i];
-            a += s[i + 1];
-
-            // Check whether we need CVC
-            if (i + 3 < n &&
-                !vowel(s[i + 2]) &&
-                !vowel(s[i + 3])) {
-
-                a += s[i + 2];
-                a += '.';
-                i += 3;
+        while (i >= 0) {
+            if (isVowel(s[i])) {
+                // CV
+                ans += s[i];
+                ans += s[i - 1];
+                i -= 2;
             }
             else {
-                a += '.';
-                i += 2;
+                // CVC
+                ans += s[i];
+                ans += s[i - 1];
+                ans += s[i - 2];
+                i -= 3;
             }
+
+            ans += '.';
         }
 
-        // Remove the final dot
-        a.pop_back();
+        // We built it backwards
+        ans.pop_back();
+        reverse(ans.begin(), ans.end());
 
-        cout << a << '\n';
+        cout << ans << '\n';
     }
 
     return 0;
