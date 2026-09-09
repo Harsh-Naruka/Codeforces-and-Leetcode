@@ -1,33 +1,50 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
-int main(){
-    int t;cin>>t;
-    
-    while(t--){
-        int n;cin>>n;
-        string s;cin>>s;
+bool vowel(char c) {
+    return c == 'a' || c == 'e';
+}
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int n;
+        cin >> n;
+
+        string s;
+        cin >> s;
+
         string a;
-        int c=n;
-        for(int i=0;i<n;i++){
-            if(c%2==0 && c%3!=0){
-                a[i]+=s[i];
-                a[i+1]+=s[i+1]+'.';
-                i++;
-                c-=2;
+
+        for (int i = 0; i < n; ) {
+
+            // Take C and V
+            a += s[i];
+            a += s[i + 1];
+
+            // Check whether we need CVC
+            if (i + 3 < n &&
+                !vowel(s[i + 2]) &&
+                !vowel(s[i + 3])) {
+
+                a += s[i + 2];
+                a += '.';
+                i += 3;
             }
-            else{
-               a[i]+=s[i];
-                a[i+1]+=s[i+1];
-                a[i+2]+=s[i+2]+'.';
-                i+=2;
-                c-=3; 
+            else {
+                a += '.';
+                i += 2;
             }
         }
-        for(int i=0;i<n;i++){
-            cout<<s[i];
-        }
-        cout<<'\n';
+
+        // Remove the final dot
+        a.pop_back();
+
+        cout << a << '\n';
     }
+
+    return 0;
 }
