@@ -25,6 +25,9 @@ int main(){
                 c-=3; 
             }
         }
-        cout<<s<<'\n';
+        for(int i=0;i<n;i++){
+            cout<<s[i];
+        }
+        cout<<'\n';
     }
 }
