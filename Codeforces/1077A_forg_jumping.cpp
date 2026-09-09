@@ -7,8 +7,8 @@ int main(){
         long long a,b,k;
         cin>>a>>b>>k;
 
-            long long asum=1;
-            long long bsum=1;
+            long long asum=a;
+            long long bsum=b;
             if(k%2==0){
                 asum*=(k/2);
                 bsum*=(k/2);
