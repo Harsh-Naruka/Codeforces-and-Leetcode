@@ -21,6 +21,8 @@ int main(){
             
             if(v[a]+v[b]==k){
                 ans++;
+                a++;
+                b--;
             }
             else if(v[a]+v[b]>k){
                 b--;
