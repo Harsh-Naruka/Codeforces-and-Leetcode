@@ -17,7 +17,7 @@ int main(){
             cin>>v[i];
         }
         sort(v.begin(),v.end());
-        for(int i=0;i<n;i++){
+        while(a<b){
             
             if(v[a]+v[b]==k){
                 ans++;
