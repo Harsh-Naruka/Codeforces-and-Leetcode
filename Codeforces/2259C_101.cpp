@@ -6,7 +6,7 @@ int main(){
     int t;cin>>t;
     while(t--){
         long long n;cin>>n;
-        long long v[n];
+        vector<long long> v(n);
         for(long long i=0;i<n;i++){
             if(v[i]==-1)v[i]=1;
             break;
