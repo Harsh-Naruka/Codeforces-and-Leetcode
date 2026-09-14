@@ -20,7 +20,7 @@ int main(){
     }
 
     if (j == 5) {
-        cout << "YE" << endl;
+        cout << "YES" << endl;
     } else {
         cout << "NO" << endl;
     }
