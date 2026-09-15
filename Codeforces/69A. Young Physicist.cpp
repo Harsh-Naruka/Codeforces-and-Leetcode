@@ -14,4 +14,7 @@ int main(){
     if(sx==0 && sy==0 && sz==0){
         cout<<"YES"<<endl;
     }
+    else{
+        cout<<"NO"<<endl;
+    }
 }
