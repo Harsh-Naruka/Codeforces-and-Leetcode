@@ -13,7 +13,7 @@ int main(){
     }n--;
     }
     else{
-        if(sum>0)cout<<"YES";
-        else cout<<"NO";
+        if(sum>0)cout<<"YES"<<endl;
+        else cout<<"NO"<<endl;
     }
 }
