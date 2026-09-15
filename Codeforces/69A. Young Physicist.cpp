@@ -12,5 +12,8 @@ int main(){
         else sum-=a[i];
     }n--;
     }
-    
+    else{
+        if(sum>0)cout<<"YES";
+        else cout<<"NO";
+    }
 }
