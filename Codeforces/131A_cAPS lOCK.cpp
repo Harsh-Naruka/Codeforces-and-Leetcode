@@ -11,7 +11,7 @@ int main(){
     }
 
     if((islower(s[0]) && uc==s.size()-1) || uc==s.size()){
-        for(char c:s){
+        for(char &c:s){
             if (isupper(c))
                 c = tolower(c);
             else
