@@ -1,19 +1,27 @@
-#include<iostream>
-#include<string>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int n;cin>>n;
-    bool check=false;
-    
-    string s=to_string(n);
-    for(int i=0;i<s.size();i++){
-        if(s[i]=='4' || s[i]=='7'){
-            check=true;
-        }
-        else if(n%4==0 || n%7==0) {check=true;}
-        else {check =false;
-        break;}
+bool isLucky(int x) {
+    while (x > 0) {
+        int d = x % 10;
+        if (d != 4 && d != 7) return false;
+        x /= 10;
     }
-    cout<<(check?"YES":"NO")<<endl;
+    return true;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    
+    bool almostLucky = false;
+    for (int i = 1; i <= n; i++) {
+        if (isLucky(i) && n % i == 0) {
+            almostLucky = true;
+            break;
+        }
+    }
+    
+    cout << (almostLucky ? "YES" : "NO") << endl;
+    return 0;
 }
