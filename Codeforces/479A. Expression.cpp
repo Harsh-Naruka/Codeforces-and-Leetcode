@@ -3,11 +3,10 @@ using namespace std;
 
 int main(){
     int a,b,c; cin>>a>>b>>c;
-    int s=0;
-    if(a>b&&b>c)s=a;
-    else if(b>a&&a>c)s=b;
-    else s=c;
-
-    return 
-
+    int s1=a+(b*c);
+    int s2=(a*b)+c;
+    int s3=(a*c)+b;
+    if(s1>s2 && s1>s3)return s1;
+    else if(s2>s1 && s2>s3) return s2;
+    else return s3;
 }
