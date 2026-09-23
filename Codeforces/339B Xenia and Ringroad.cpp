@@ -16,6 +16,7 @@ int main(){
         else{
             ans+=(n-(cur-a));
         }
+        cur=a;
     }
     cout<<ans<<endl;
 }
