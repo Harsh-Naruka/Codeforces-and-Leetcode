@@ -5,7 +5,7 @@ int main(){
     int t;cin>>t;
     while(t--){
         long long a,b,c;cin>>a>>b>>c;
-        long long ans=max( min(|a-b|, |a-b-c|), |a+c-b| );
+        long long ans=max( min(abs(a-b), abs(a-b-c)), abs(a+c-b) );
         cout<<ans<<endl;
     }
 }
