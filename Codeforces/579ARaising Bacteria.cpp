@@ -2,9 +2,11 @@
 using namespace std;
 
 int main(){
-    long long x;cin>>x;
-    if(x%2==0){
-        cout<<1<<endl;
+    int x;cin>>x;
+    int ans=0;
+    while(x>0){
+        ans += x & 1;
+        x >>= 1;
     }
-    else cout<<2<<endl;
+    cout<<ans<<endl;
 }
