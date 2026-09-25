@@ -8,10 +8,10 @@ int main(){
         string s(n);
         for(int i=0;i<n;i++){
             cin>>s;
-            mp[s++];
+            mp[s]++;
         }
         string ans;
-        for(auto c:s){
+        for(auto c:mp){
             if(c.second>a){
                 ans=c.first;
                 a=c.second;
