@@ -6,13 +6,18 @@ int main(){
     while(t--){
         int n;cin>>n;
         string s;cin>>s;
-        int a=0;
+        int ans=0;
         int count=0;
 
         for(char c:s){
-            if(c=='(')a++;
-            else a--;
-            
+            if(c=='(')count++;
+            else count--;
+
+            if(a<0){
+                ans++;
+                count=0;
+            }
         }
+        cout<<ans<<endl;
     }
 }
