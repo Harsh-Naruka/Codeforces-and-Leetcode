@@ -9,7 +9,7 @@ int main(){
         int ans=0;
         int count=0;
 
-        for(char c:s){
+        for(auto &c:s){
             if(c=='(')count++;
             else count--;
 
