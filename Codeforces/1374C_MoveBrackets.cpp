@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-Using namespace std;
+using namespace std;
 
 int main(){
     int t;cin>>t;
@@ -13,7 +13,7 @@ int main(){
             if(c=='(')count++;
             else count--;
 
-            if(a<0){
+            if(count<0){
                 ans++;
                 count=0;
             }
