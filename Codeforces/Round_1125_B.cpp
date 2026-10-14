@@ -1,25 +1,40 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int t;cin>>t;
-    while(t--){
-        int n;cin>>n;
-        string s;cin>>s;
-        int c_document=0;
-        string ans(n);
-        for(int i=0;i<s.size();i++){
-            if(s[i]=='1'){
-                c_document++;
-                ans.push(c_document);
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        string s;
+        cin >> n >> s;
+        vector<bool> printed(n + 1, false);
+        vector<int> st;
+        for (int i = 1; i <= n; i++) {
+            char c = s[i - 1];
+            if (c == '1') {
+                st.push_back(i);
+            } else if (c == '2') {
+                if (!st.empty()) {
+                    printed[st.back()] = true;
+                    st.pop_back();
+                } else {
+                    printed[i] = true;
+                }
+            } else {
+                printed[i] = true;
             }
-            else if(s[i]=='2')ans.pop();
-            else{
-                ans.pop();
-                break;
-            }
-            
         }
-        return ans;
+        vector<int> res;
+        for (int i = 1; i <= n; i++)
+            if (!printed[i]) res.push_back(i);
+        cout << res.size() << "\n";
+        for (size_t j = 0; j < res.size(); j++) {
+            if (j) cout << " ";
+            cout << res[j];
+        }
+        cout << "\n";
     }
 }
