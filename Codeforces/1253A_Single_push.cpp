@@ -1,36 +1,49 @@
-#include<bits/stdc++.h>
+
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int t;cin>>t;
-    while(t--){
-        int n;cin>>n;
-        vector<int> a(n);
-        vector<int> b(n);
+int main() {
+    int t;
+    cin >> t;
 
-        for(int i=0;i<n;i++){
-            cin>>a[i];
-        }
-        for(int i=0;i<n;i++){
-            cin>>b[i];
-        }
-        
-        bool check=true;
-        int k1=0,k=0;
-        for(int i=0;i<n;i++){
-            if(b[i]<a[i]) {
-                check=false;
+    while (t--) {
+        int n;
+        cin >> n;
+
+        vector<int> a(n), b(n);
+
+        for (int i = 0; i < n; i++) cin >> a[i];
+        for (int i = 0; i < n; i++) cin >> b[i];
+
+        bool check = true;
+        int l = -1, r = -1, k = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (b[i] < a[i]) {
+                check = false;
                 break;
             }
-            else if(b[i]>a[i]){
-                k=b[i]-a[i];
-                if(k1==0)k1=k;
-                else if(k1!=k){
-                    check=false;
+
+            if (b[i] > a[i]) {
+                if (l == -1) {
+                    l = i;
+                    k = b[i] - a[i];
+                }
+                r = i;
+            }
+        }
+
+        if (check && l != -1) {
+            for (int i = l; i <= r; i++) {
+                if (b[i] - a[i] != k) {
+                    check = false;
                     break;
                 }
             }
         }
-        cout<<(check?"Yes":"No")<<endl;
+
+        cout << (check ? "YES" : "NO") << '\n';
     }
+
+    return 0;
 }
